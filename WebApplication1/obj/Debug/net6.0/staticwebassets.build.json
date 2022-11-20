@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "BDLVbNsM+/q47oJ2jm2ePJVEH4D9JLykAcBxqTuYdXE=",
+  "Source": "EmployeeManagment_",
+  "BasePath": "_content/EmployeeManagment_",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EmployeeManagment_\\wwwroot",
+      "Source": "EmployeeManagment_",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/EmployeeManagment_",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

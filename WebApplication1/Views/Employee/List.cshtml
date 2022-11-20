@@ -1,0 +1,42 @@
+﻿@model List<EmployeesLIstViewModel>
+
+   
+<table class="table container">
+
+    <thead>
+        <tr>
+            <th scope="col">EmployeCode</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">FatherName</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var employe in Model)
+        {
+            if (employe.IsDeleted == false)
+            {
+                <tr>
+                    <td>@employe.EmployeeCode</td>
+                    <td>@employe.EmployeeName</td>
+                    <td>@employe.EmployeeLastname</td>
+                    <td>@employe.EmployeeFathername</td>
+                    <td>
+                       
+                        <a class="btn btn-secondary ms-1" asp-route="employee-update-id" asp-route-empcode="@employe.EmployeeCode"> Update Employe</a>
+                        <a class="btn btn-danger  ms-1" asp-route="employee-deleted-blogcode" asp-route-empcode="@employe.EmployeeCode"> Deleted Employe</a>
+                    </td>
+                </tr>
+
+            }
+
+        }
+
+    </tbody>
+</table>
+
+<div class="d-flex justify-content-center">
+    <a class="btn btn-primary ms-1" asp-controller="employee" asp-action="add">Add New Employe</a>
+</div>

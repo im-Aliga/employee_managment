@@ -1,0 +1,45 @@
+﻿@model EmployeeAddViewModel
+
+
+<div class="container">
+    <div class="row justify-content-end">
+        <div class="">
+           
+        </div>
+    </div>
+    <form method="POST" asp-controller="employee" asp-action="add" class="">
+        
+        <div class="form-group">
+            <label asp-for="EmployeeName"></label>
+            <input  asp-for="EmployeeName" class="form-control w-100">
+            <span asp-validation-for="EmployeeName" class="text-danger"></span>
+        </div>
+        <div class="form-check">
+            <label asp-for="EmployeeLastname"></label>
+            <input asp-for="EmployeeLastname" class="form-control w-100">
+            <span asp-validation-for="EmployeeLastname" class="text-danger"></span>
+        </div>
+        <div class="form-check">
+            <label asp-for="EmployeeFathername"></label>
+            <input asp-for="EmployeeFathername" class="form-control w-100">
+            <span asp-validation-for="EmployeeFathername" class="text-danger"></span>
+           
+        </div>
+        <div class="form-check">
+            <label asp-for="FinCode"></label>
+            <input asp-for="FinCode" class="form-control w-100">
+            <span asp-validation-for="FinCode" class="text-danger"></span>
+        </div>
+        <div class="form-check">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control w-100">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="d-flex justify-content-center">
+
+            <button  type="submit" class="btn btn-primary mt-3">Submit</button>
+            <a asp-controller="Employee" asp-action="list" target="_blank" class="btn btn-secondary  mt-3">Employees</a>
+        </div>
+    </form>
+</div>
+

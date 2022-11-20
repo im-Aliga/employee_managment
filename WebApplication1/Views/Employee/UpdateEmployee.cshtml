@@ -1,0 +1,33 @@
+﻿@model EmployeeUpdateViewModel
+
+<div class="container">
+    <div class="row justify-content-end">
+        <div class="">
+            <a asp-controller="employee" asp-action="list" target="_blank" class="btn btn-secondary">Books</a>
+        </div>
+    </div>
+    <form method="POST" asp-route="employee-update" asp-route-EmployeeCode="@Model.EmployeeCode">
+        
+        <div class="form-group">
+            <label asp-for="EmployeeName"></label>
+            <input asp-for="EmployeeName" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="EmployeeLastname"></label>
+            <input asp-for="EmployeeLastname" class="form-control">
+        </div>
+        <div class="form-check">
+            <label asp-for="EmployeeFathername"></label>
+            <input asp-for="EmployeeFathername" class="form-control">
+        </div>
+        <div class="form-check">
+            <label asp-for="FinCode"></label>
+            <input asp-for="FinCode" class="form-control">
+        </div>
+        <div class="form-check">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
